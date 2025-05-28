@@ -31,7 +31,7 @@ export default function App() {
   // get data LED from server
   useEffect(() => {
     (async () => {
-      const res = await fetch("https://masoudi.vira-tec.com/v1/status");
+      const res = await fetch("http://masoudi.vira-tec.com/v1/status");
       const data = await res.json();
       setLed(data);
     })();
@@ -40,7 +40,7 @@ export default function App() {
   // update LED
   const handleLed = async (ledNumber, ledState) => {
     const res = await fetch(
-      `https://masoudi.vira-tec.com/v1/status?led_number=${ledNumber}&led_state=${ledState}`,
+      `http://masoudi.vira-tec.com/v1/status?led_number=${ledNumber}&led_state=${ledState}`,
       {
         method: "PATCH",
       }
