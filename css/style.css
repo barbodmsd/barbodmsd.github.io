@@ -1,0 +1,364 @@
+@font-face {
+    font-family: 'IRANYekanXVF';
+    src: url('./../font/IRANYekanXVF.woff') format('woff-variations'),
+    /* will be the standard and works in Safari now */
+    url('./../font/IRANYekanXVF.woff') format('woff');
+    /* for the other supporting browsers */
+    font-weight: 100 1000;
+    font-display: fallback;
+
+}
+
+@font-face {
+    font-family: GilroyRegular;
+    src: url("../font/Gilroy-Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    font-family: IRANYekanXVF;
+    line-height: 1;
+    scroll-behavior: smooth;
+    cursor: default;
+}
+@supports (font-variation-settings: normal) {
+    body {
+        font-family: 'IRANYekanXVF', GilroyRegular, sans-serif;
+        font-weight: 500;
+        font-variation-settings: "wght" 500, "dots" 1;
+    }
+}
+
+.container {
+    max-width: 40rem;
+    margin: 0 auto;
+    position: relative;
+    direction: rtl;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.flex {
+    display: flex;
+}
+
+.c-align-items {
+    align-items: center;
+}
+
+.c-justify-content {
+    justify-content: center;
+}
+
+.s-justify-content {
+    justify-content: space-around;
+}
+
+.c-flex-dir {
+    flex-direction: column;
+}
+
+.lg-gap {
+    gap: 4.8rem;
+}
+
+.md-gap {
+    gap: 1.2rem;
+}
+
+.sm-gap {
+    gap: 0.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+
+.header {
+    width: 100%;
+    padding: 2.4rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logo {
+    width: 9.6rem;
+    height: 9.6rem;
+    border: 0.1rem solid rgba(225, 225, 225, 0.75);
+    border-radius: 50%;
+    margin-bottom: 1.6rem;
+}
+
+.heading-primary {
+    font-size: 2.4rem;
+    color: #333;
+    margin-bottom: 1.6rem;
+    font-weight: 600;
+    font-variation-settings: "wght" 600, "dots" 1;
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    color: #777;
+}
+
+/* Navigation */
+
+.navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.2rem 0;
+    text-align: center;
+}
+
+.navigation {
+    margin-top: 2.4rem;
+}
+
+.heading-secondary {
+    font-size: 1.8rem;
+    margin-bottom: 1.6rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    width: 90%;
+    padding: 1.6rem 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.btn:not(:last-child) {
+    margin-bottom: 0.8rem;
+}
+
+.icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: #fff;
+    font-size: 2.4rem;
+}
+
+.btn-title {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.icon-outline {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: #0088cc;
+    transition: all 0.5s;
+}
+
+.btn-title-outline {
+    font-size: 1.8rem;
+    color: #0088cc;
+    transition: all 0.5s;
+}
+
+.address {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 90%;
+    margin: 2.4rem;
+}
+
+.icon-address {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: #777;
+}
+
+.address-title {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #777;
+}
+
+.copyright {
+    width: 100%;
+    padding: 4.8rem;
+    margin-top: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.4rem;
+    color: rgba(125, 125, 125, 1);
+    direction: ltr;
+}
+
+.copyright-text {
+    font-family: "fRoboto";
+    font-size: 1.1rem;
+    color: inherit;
+}
+
+.social-copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.8rem;
+}
+
+.icon-copyright {
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 2.4rem;
+    color: inherit;
+}
+
+.divider {
+    width: 45%;
+    height: 0.1rem;
+    margin: 3.2rem auto;
+    background: rgba(225, 225, 225, 0.9);
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem #999;
+}
+
+/* Background */
+
+.bg-whatsapp {
+    background: #25d366;
+}
+
+.bg-whatsapp:hover {
+    background: #1ea952;
+}
+
+.bg-telegram {
+    background: #0088cc;
+}
+
+.bg-telegram:hover {
+    background: #006da3;
+}
+
+.bg-instagram {
+    position: relative;
+    background: linear-gradient(to left, #c13584, #e1306c, #fcaf45);
+    z-index: 1;
+}
+
+.bg-instagram::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to left, #9a2a6a, #b42656, #ca8c37);
+    z-index: -1;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+
+.bg-instagram:hover::before {
+    opacity: 1;
+}
+
+.bg-outline {
+    box-shadow: inset 0 0 0 0.2rem #0088cc;
+}
+
+.bg-outline:hover {
+    box-shadow: inset 0 0 0 0.2rem #006da3;
+}
+
+.bg-outline:hover .icon-outline {
+    color: #006da3;
+}
+
+.bg-outline:hover .btn-title-outline {
+    color: #006da3;
+}
+
+.bg-googlemap {
+    background: #0f9d58;
+}
+
+.bg-googlemap:hover {
+    background: #0c7e46;
+}
+
+.bg-balad {
+    position: relative;
+    background: linear-gradient(to left, #F05E5F, #224E69);
+    z-index: 1;
+}
+
+.bg-balad::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to left, #F05E5F, #224E69);
+    z-index: -1;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+
+.bg-balad:hover::before {
+    opacity: 1;
+}
+
+@media (max-width: 75em) {
+    html,
+    body {
+        font-size: 56.25%;
+    }
+}
+
+/*
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
